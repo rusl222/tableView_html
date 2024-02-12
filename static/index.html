@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <title>TableView</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="table_view.js"></script>
+    <script>
+        window.onload=()=>{
+            var socket = new WebSocket("ws://127.0.0.1:8008/tableview");
+            const tab = new TableView("tableView",socket);
+        }
+    </script>
+</head>
+    <body>
+        <div id="tableView"></div>
+        <h1 id="errorClose" style="position: absolute; object-position: center;" hidden="true">Соединение закрыто!</h1>
+    </body>
+
+</html>
+
